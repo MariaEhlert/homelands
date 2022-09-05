@@ -1,34 +1,45 @@
-
 @import '../../App.scss';
 
-header{
+header {
+    height: 10vh;
+    padding-top: 2%;
+
+    .topNav {
+        @media (width < 1199px) {
+            display: none;
+        }
+    }
+
     @include logoFont;
     position: relative;
     margin-bottom: 5%;
-    .svgWrapper{
-        svg{
+
+    .svgWrapper {
+        svg {
             position: absolute;
             z-index: -1;
         }
     }
-    .headerWrapper{
+
+    .headerWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         @include sidePadding;
-        .navWrapper{
+
+        .navWrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            nav{
-                ul{
-                    li{
-                        display: inline-block;
-                        padding-left: 5%;
-                        a{
-                            color: white;
-                            font-size: 2vw;
-                            &.active{
-                                color: #AF7627;
-                            }
+            ul {
+                li {
+                    display: inline-block;
+                    padding-left: 5%;
+
+                    a {
+                        color: white;
+                        font-size: 2vw;
+
+                        &.active {
+                            color: #AF7627;
                         }
                     }
                 }
