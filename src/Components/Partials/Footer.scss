@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include sidePadding;
+    color: white;
+    background-color: #000000;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    .contactWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        h3{
+            @include logoFont;
+            font-size: 2.5vw;
+        }
+        p{
+
+        }
+    }
+    .mediaWrapper{
+        display: flex;
+        justify-content: end;
+        svg{
+            width: 5vw;
+            height: 5vh;
+        }
+    }
+}

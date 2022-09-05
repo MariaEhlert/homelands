@@ -1,0 +1,21 @@
+.searchWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: end;
+    input[type=text]{
+        width: 100%;
+        padding: 2%;
+        border-radius: 5px 0px 0px 5px;
+    }
+    button{
+        border-radius: 0px 5px 5px 0px;
+        width: 20%;
+        padding: 2%;
+        background-color: #999999;
+        svg{
+            color: white;
+            
+        }
+    }
+}
