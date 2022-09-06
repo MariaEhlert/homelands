@@ -31,8 +31,6 @@ export const Header = () => {
 				</div>
 			</nav>
 			<BurgerMenu navItems={navItems} />
-
-
 		</header>
 	)
 }

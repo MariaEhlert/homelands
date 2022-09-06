@@ -1,10 +1,13 @@
 //Overskrift & brødtekst
-// font-family: 'Trebuchet MS', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 *{
     padding: 0;
     margin: auto 0;
     text-decoration: none;
+}
+main{
+    font-family: 'Trebuchet MS', sans-serif;
+
 }
 @mixin sidePadding{
     padding-left: 7%;
@@ -12,4 +15,19 @@
 }
 @mixin logoFont{
     font-family: 'Odibee Sans', cursive;
+}
+@mixin heading {
+    h1{
+
+    }
+    h2{
+
+    }
+    h3{
+
+    }
+    h4{
+        font-size: 2vw;
+    }
+    
 }

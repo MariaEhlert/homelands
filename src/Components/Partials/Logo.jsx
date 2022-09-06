@@ -3,7 +3,7 @@ export const Logo = () => {
     return(
         <>
         <div className="logoWrapper">
-            <h1>HomeLands</h1>
+            <h2>HomeLands</h2>
         </div>
         </>
     )

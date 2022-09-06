@@ -1,0 +1,13 @@
+@import '../../../App.scss';
+@include heading;
+h1{
+    display: none;
+}
+.homeWrapper{
+    @include sidePadding;
+    padding-bottom: 5%;
+}
+h4{
+    text-align: center;
+    padding-bottom: 2%;
+}
