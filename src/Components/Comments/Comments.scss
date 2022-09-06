@@ -1,3 +1,13 @@
+@import '../../App.scss';
 .commentsWrapper{
     background-color: #FED9C9;
+    text-align: center;
+    padding: 5%;
+    article{
+        @include sidePadding;
+    }
 }
+// .submitComment{
+//     display: flex;
+//     justify-content: center;
+// }
