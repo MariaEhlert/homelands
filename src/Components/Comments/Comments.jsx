@@ -2,7 +2,10 @@ import './Comments.scss';
 import React, { useState, useEffect } from "react"
 import axios from "axios";
 import Carousel from 'react-material-ui-carousel';
+import { useAuth } from '../Helpers/Auth/Auth';
+import { CommentPost } from './CommentsPost';
 export const Comments = () => {
+    const {loginData} = useAuth();
     const [comments, setComments] = useState([]);
     useEffect(() => {
         const getComments = async () => {
@@ -35,17 +38,18 @@ export const Comments = () => {
             </Carousel>
             
         </section>
-        {/* <section className='submitComment'>
-            <button>Skriv en anmeldelse</button>
-        </section> */}
-        </>
-
-    )
-}
-
-export const SlideText = () => {
-    return (
-        <>
+        <section className='submitComment'>
+        {!loginData ? (
+            <p>Log ind for at skrive en anmeldelse</p>
+        )
+        :
+        (
+            <>
+            {/* <button>Skriv en anmeldelse</button> */}
+            <CommentPost />
+            </>
+        )}
+        </section>
         </>
 
     )
