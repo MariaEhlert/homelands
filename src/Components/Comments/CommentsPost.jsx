@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import axios from "axios";
+import './CommentsPost.scss';
 
 export const CommentPost = () => {
     const { register, handleSubmit, formState:{errors} } = useForm();
