@@ -1,0 +1,46 @@
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    form {
+        width: 100%;
+        h5 {
+            padding-bottom: 5%;
+            padding-top: 3%;
+            text-align: center;
+        }
+        .formElement {
+            padding-bottom: 5%;
+            .formInput {
+                input[type=text],
+                textarea {
+                    width: 100%;
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+            }
+            input[type=number]{
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px; 
+            } 
+        }
+        span {
+            text-align: center;
+            color: red;
+        }
+    }
+    .btnWrapper{
+        text-align: center;
+        button {
+            margin-left: 3%;
+            background-color: #AF7627;
+            color: white;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}

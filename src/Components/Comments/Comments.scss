@@ -5,6 +5,12 @@
     padding: 5%;
     article{
         @include sidePadding;
+        h5{
+            padding-bottom: 2%;
+        }
+        p{
+            padding-bottom: 2%;
+        }
     }
 }
 .submitComment{

@@ -20,7 +20,7 @@ export const Comments = () => {
         }
         getComments();
     }, [])
-    const firstComment = comments.slice(9, 13);
+    const firstComment = comments.slice(69, 72);
     return (
         <>
         <section className='commentsWrapper'>
@@ -31,6 +31,7 @@ export const Comments = () => {
                             <h5>{item.title}</h5>
                             <p>{item.content}</p>
                             <p>{item.user.firstname}, {item.created_friendly}</p>
+                            <p>Antal stjerner: {item.num_stars}</p>
                         </article>
                     )
                 })
