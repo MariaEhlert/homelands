@@ -1,0 +1,41 @@
+@import '../../../App.scss';
+//3 udvalge boliger wrapper (forside)
+.selectWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+}
+//liste med alle boliger wrapper (boliger til salg) 
+.homesListWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+    @include sidePadding;
+    padding-bottom: 12%;
+}
+
+//style til hver bolig i liste 
+.figureWrapper{
+    padding: 8%;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.058);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.261);
+    figure{
+        img{
+            width: 100%;
+            height: 250px;
+            object-fit: fill;
+        }
+        figcaption{
+            .homeInfoWrapper{
+                display: grid;
+                grid-template-columns: 1fr 2fr 2fr;
+            }
+            
+        }
+    }
+}
+
+
+

@@ -1,11 +1,11 @@
 import { Comments } from "../../Comments/Comments"
 import { Layout } from "../../Helpers/Layout/Layout"
 import { HeroSlider } from "../../HeroSlider/HeroSlider"
-import { SelectedHomes } from "../../SelectedHomes/SelectedHomes"
+import { SelectedHomes } from "../../Homes/SelectedHomes/SelectedHomes"
 import { Staff } from "../../Staff/Staff"
-import './Home.scss'
+import './Index.scss'
 
-export const Home = () => {
+export const Index = () => {
     return(
         <Layout title='Forside' description='forside'>
             <HeroSlider/>

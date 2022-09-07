@@ -1,10 +1,12 @@
 import { Layout } from "../../Helpers/Layout/Layout"
+import { HomesList } from "../../Homes/HomesList/HomesList"
 
 export const HomesForSale = () => {
     return(
-        <Layout title='Forside' description='forside'>
+        <Layout title='Boliger til salg' description='boligertilsalg'>
             <h1>Boliger til salg</h1>
-            <p>her kommer mine props children</p>
+            <HomesList />
+            
         </Layout>
     )
 }

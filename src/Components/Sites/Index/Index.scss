@@ -1,8 +1,8 @@
 @import '../../../App.scss';
 @include heading;
-h1{
-    display: none;
-}
+// h1{
+//     display: none;
+// }
 .homeWrapper{
     @include sidePadding;
     padding-bottom: 5%;

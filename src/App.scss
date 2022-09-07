@@ -18,7 +18,8 @@ main{
 }
 @mixin heading {
     h1{
-
+        @include sidePadding;
+        padding-bottom: 2%;
     }
     h2{
 

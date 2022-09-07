@@ -6,7 +6,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2%;
     padding-bottom: 5%;
-    @include sidePadding;
+    // @include sidePadding;
+    padding-left: 15%;
+    padding-right: 15%;
     article {
         figure {
             position: relative;
@@ -46,7 +48,7 @@
             }
         }
         .div:hover .SlidebottomEffect {
-            height: 15vh;
+            height: 16vh;
         }
     }
 }

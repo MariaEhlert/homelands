@@ -44,3 +44,18 @@
         }
     }
 }
+.commentsPosted{
+    margin-top: 10%;
+    border: 1px solid #FED9C9;
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    p{
+        padding-bottom: 2%;
+        font-size: 1.3vw;
+    }
+    a{
+        color: black;
+        text-decoration: underline;
+    }
+}
