@@ -28,6 +28,9 @@
             object-fit: fill;
         }
         figcaption{
+            h3, p{
+                color: black;
+            }
             .homeInfoWrapper{
                 display: grid;
                 grid-template-columns: 1fr 2fr 2fr;

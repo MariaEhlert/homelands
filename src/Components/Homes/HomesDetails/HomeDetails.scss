@@ -1,0 +1,31 @@
+@import '../../../App.scss';
+.homeDetailsWrapper{
+    @include sidePadding;
+    .homeInfoWrapper{
+        padding-bottom: 3%;
+        figure{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+    }
+    .homeDataWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 3%;
+        .homeDataInfo{
+            div{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                p{
+                    
+                }
+            }
+        }
+    }
+    .homeContentWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

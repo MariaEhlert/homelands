@@ -24,7 +24,7 @@ export const HeroSlider = () => {
     return (
         <article className='heroWrapper'>
             <Carousel animation="fade" interval="5000" showThumbs={false}>
-                {first3.map((items) => {
+                {first3 && first3.map((items) => {
                         return (
                             <React.Fragment key={items.image}>
                                 <img src={items.image[1]} width="100%"  alt={items.image} />
