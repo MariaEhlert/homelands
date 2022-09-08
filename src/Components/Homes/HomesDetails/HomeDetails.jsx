@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import './HomeDetails.scss'
+import { ImageModal, LayoutModal, LikeModal, MapModal } from "./Modal";
 
 export const HomeDetails = () => {
     const { home_id } = useParams(0);
@@ -33,28 +34,32 @@ export const HomeDetails = () => {
         <>
             {homeDetails ? (
                 <>
-                    <img src={homeDetails.images[0].filename.medium} width="100%" alt={homeDetails.image} />
+                    <div className="homeImageWrapper">
+                        <img src={homeDetails.images[0].filename.medium} width="100%" alt={homeDetails.image} />
+                    </div>
                     <section className="homeDetailsWrapper">
                         <article className="homeInfoWrapper">
                             <figure>
                                 <figcaption>
-                                    <p>{homeDetails.adress}</p>
+                                    <h2>{homeDetails.address}</h2>
                                     <p>{homeDetails.zipcode} {homeDetails.city}</p>
-                                    <div>
-                                        <p>{homeDetails.type}</p>
-                                        <p>{homeDetails.floor_space} m²</p>
+                                    <div className="homeRooms">
+                                        <p>{homeDetails.type} |</p>
+                                        <p>{homeDetails.floor_space} m² |</p>
                                         <p>{homeDetails.num_rooms} værelser</p>
                                     </div>
                                     <p>Set {homeDetails.num_clicks} gange</p>
                                 </figcaption>
-                                <div>
-                                    <img src={require('../../../Assets/Images/CameraIcon.png')} alt="cameraIcon" />
-                                    <img src={require('../../../Assets/Images/LayoutIcon.png')} alt="layoutIcon" />
-                                    <img src={require('../../../Assets/Images/LocationIcon.png')} alt="locationIcon" />
-                                    <img src={require('../../../Assets/Images/HeartIcon.png')} alt="heartIcon" />
+                                <div className="homeIconWrapper">
+                                    <ImageModal item={homeDetails} />
+                                    <LayoutModal item={homeDetails} />
+                                    <MapModal item={homeDetails} />
+                                    <button>
+                                        <img src={require('../../../Assets/Images/HeartIcon.png')} alt="heartIcon" />
+                                    </button>
                                 </div>
-                                <figcaption>
-                                    <p>Kontaktpris {homeDetails.price}</p>
+                                <figcaption className="homePriceWrapper">
+                                    <p>Kontaktpris <span>{homeDetails.price}</span></p>
                                     <p>Udbetaling {homeDetails.payout}</p>
                                     <p>Ejerudgift per måned {homeDetails.cost}</p>
                                 </figcaption>
@@ -133,12 +138,11 @@ export const HomeDetails = () => {
                         </section>
 
                         <section className="homeContentWrapper">
-                            <article>
+                            <article className="homeDescription">
                                 <p>{homeDetails.description}</p>
                             </article>
-
-                            <article>
-                                <h3>Kontakt</h3>
+                            <article className="contactWrapper">
+                                <h2>Kontakt</h2>
                                 <figure>
                                     <img src={homeDetails.staff.image} alt={homeDetails.staff.firstname} />
                                     <figcaption>

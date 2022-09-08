@@ -1,10 +1,9 @@
 @import '../../App.scss';
-
 header {
+    position: relative;
     height: 10vh;
     padding-top: 2%;
     @include logoFont;
-    position: relative;
     margin-bottom: 5%;
 
     .topNav {

@@ -3,7 +3,7 @@ import './HomesItem.scss';
 export const HomesListItem = props => {
     return (
         <div key={props.data.id} className="figureWrapper">
-            <Link to={`${props.data.id}`}>
+            <Link to={`/homesforsale/${props.data.id}`}>
                 <figure >
                     <img src={props.data.images[0].filename.medium} width="100%" alt={props.data.image} />
                     <figcaption>

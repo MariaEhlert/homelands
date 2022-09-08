@@ -1,10 +1,9 @@
 import { Route, Routes } from "react-router-dom"
-import { HomesList } from "../Homes/HomesList/HomesList"
 import { Index } from "../Sites/Index/Index"
-import { HomesForSale } from "../Sites/HomesForSale/HomesForSale"
 import { Login } from "../Sites/Login/Login"
 import { NoPage } from '../Sites/NoPage/NoPage'
 import { HomeDetails } from "../Homes/HomesDetails/HomeDetails"
+import { HomesList } from "../Homes/HomesList/HomesList"
 
 export const AppRouter = () => {
   return (
