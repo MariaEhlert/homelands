@@ -4,6 +4,7 @@ import { Login } from "../Sites/Login/Login"
 import { NoPage } from '../Sites/NoPage/NoPage'
 import { HomeDetails } from "../Homes/HomesDetails/HomeDetails"
 import { HomesList } from "../Homes/HomesList/HomesList"
+import { EditComment } from "../Comments/EditComment"
 
 export const AppRouter = () => {
   return (
@@ -15,7 +16,10 @@ export const AppRouter = () => {
         <Route path=":home_id" element={<HomeDetails/>}/>
       </Route>
 
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/login">
+        <Route index element={<Login/>}></Route>
+        <Route path=":comment_id" element={<EditComment/>}/>
+      </Route>
       <Route path="*" element={<NoPage />} />
     </Routes>
   )

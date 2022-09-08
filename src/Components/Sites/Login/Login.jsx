@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { CommentPost } from "../../Comments/CommentsPost";
 import { UserComments } from "../../Comments/UserComments";
 import { useAuth } from "../../Helpers/Auth/Auth";
 import { Layout } from "../../Helpers/Layout/Layout"

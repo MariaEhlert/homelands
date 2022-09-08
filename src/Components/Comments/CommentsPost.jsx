@@ -73,7 +73,7 @@ export const CommentPost = () => {
             (
                 <article className='commentsPosted'>
                     <p>Tak for din anmeldelse af HomeLands!</p>
-                    <Link to={''}>Se din anmeldelse</Link>
+                    <Link to={'/login'}>Se din anmeldelse</Link>
                 </article>
             )}
         </section>
