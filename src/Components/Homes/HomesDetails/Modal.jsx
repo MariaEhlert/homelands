@@ -103,7 +103,7 @@ export const MapModal = props => {
                 <button onClick={closeModal}>
                     <img src={require('../../../Assets/Images/XIcon.png')} alt="XIcon" />
                 </button>
-                {/* <div><img src={props.item.floorplan} alt={props.item.id} /></div> */}
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2170.1487200338147!2d9.96242401596871!3d57.04899359874515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sda!2sdk!4v1662629819602!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             </Modal>
         </div>
     );
