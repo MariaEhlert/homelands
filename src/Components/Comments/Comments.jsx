@@ -4,6 +4,7 @@ import axios from "axios";
 import Carousel from 'react-material-ui-carousel';
 import { useAuth } from '../Helpers/Auth/Auth';
 import { CommentPost } from './CommentsPost';
+import { Link } from 'react-router-dom';
 export const Comments = () => {
     const {loginData} = useAuth();
     const [comments, setComments] = useState([]);
@@ -41,12 +42,13 @@ export const Comments = () => {
         </section>
         <section className='submitComment'>
         {!loginData ? (
-            <p>Log ind for at skrive en anmeldelse</p>
+            <Link to={'/login'}>
+                <p>Log ind for at skrive en anmeldelse</p>
+            </Link>
         )
         :
         (
             <>
-            {/* <button>Skriv en anmeldelse</button> */}
             <CommentPost />
             </>
         )}

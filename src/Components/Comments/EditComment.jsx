@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { authHeader } from "../Helpers/Auth/Auth";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import './EditComment.scss'
 
 export const EditComment = () => {
     const {comment_id} = useParams();
@@ -23,7 +24,7 @@ export const EditComment = () => {
     }
     return (
         <section>
-            <article className='formWrapper'>
+            <article className='editFormWrapper'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h5>Skriv en anmeldelse</h5>
                     <div className='formElement'>
@@ -65,7 +66,9 @@ export const EditComment = () => {
                     </div>
                 </form>
             </article>
-            <Link to={'/login'}>Tilbage</Link>
+            <div className="goBack">
+                <Link to={'/login'}>Gå tilbage til alle kommentar</Link>
+            </div>
         </section>
 
     )

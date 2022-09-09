@@ -1,8 +1,5 @@
 @import '../../../App.scss';
 @include heading;
-// h1{
-//     display: none;
-// }
 .homeWrapper{
     @include sidePadding;
     padding-bottom: 5%;
@@ -10,4 +7,44 @@
 h4{
     text-align: center;
     padding-bottom: 2%;
+}
+
+.heroWrapper{
+    // visibility:hidden;
+    margin-top: -15%;
+    img{
+        height: 70vh;
+        width: 100%;
+        // visibility:hidden;
+    }
+    .css-1m9128y{
+        display: none;
+    }
+}
+
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+
+@media screen and (max-width: $tablet) {
+  body{
+    .heroWrapper{
+        width: 100%;
+        img{
+            height: 50vh;
+        }
+    }   
+  }
+}
+@media screen and (max-width: $mobile){
+    body{
+    .heroWrapper{
+        margin-top: -20%;
+        img{
+            height: 30vh;
+        }
+    }    
+    }
 }

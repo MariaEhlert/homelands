@@ -2,25 +2,26 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { authHeader, useAuth } from "../Helpers/Auth/Auth";
 import axios from "axios";
+import './UserComments.scss'
 
 
 export const UserComments = () => {
     const { loginData } = useAuth();
     const [userComments, setUserComments] = useState([]);
-        useEffect(() => {
-            const getUserComments = async () => {
-                try {
-                    const result = await axios.get(`https://api.mediehuset.net/homelands/reviews`);
-                    if (result.data) {
-                        setUserComments(result.data.items);
-                    }
-                } catch (error) {
-                    console.log(error);
+    useEffect(() => {
+        const getUserComments = async () => {
+            try {
+                const result = await axios.get(`https://api.mediehuset.net/homelands/reviews`);
+                if (result.data) {
+                    setUserComments(result.data.items);
                 }
+            } catch (error) {
+                console.log(error);
             }
-            getUserComments();
-        }, [])
-    
+        }
+        getUserComments();
+    }, [])
+
     const deleteComment = async (id) => {
         try {
             const result = await axios.delete(`https://api.mediehuset.net/homelands/reviews/${id}`, { headers: authHeader() });
@@ -35,26 +36,33 @@ export const UserComments = () => {
         <>
             {!loginData ?
                 (
-                    <p>Du skal logge ind for at se dine kommentar</p>
+                    <></>
                 )
                 :
                 (
-                    <>
-                        <h3>Title</h3>
-                        <h3>Data</h3>
-                        <h3>Handling</h3>
-                        {userComments.filter(user => user.user_id == loginData.user_id).map(getUser => {
-                            return (
-                                <article key={getUser.id}>
-                                    <p>{getUser.title}</p>
-                                    <p>{getUser.created_friendly}</p>
-                                    <Link to={getUser.id}>Rediger</Link>
-                                    {/* <Link to={''}>Slet</Link> */}
-                                    <button onClick={() => deleteComment(getUser.id)}>Slet</button>
-                                </article>
-                            )
-                        })}
-                    </>
+                    <table className="userCommentsWrapper">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Data</th>
+                                <th>Handling</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {userComments.filter(user => user.user_id == loginData.user_id).map(getUser => {
+                                return (
+                                    <tr key={getUser.id}>
+                                        <td>{getUser.title}</td>
+                                        <td>{getUser.created_friendly}</td>
+                                        <td>
+                                            <Link to={getUser.id}>Rediger</Link>
+                                            <button onClick={() => deleteComment(getUser.id)}>Slet</button>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 )}
 
         </>

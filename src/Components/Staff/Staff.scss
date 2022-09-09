@@ -6,7 +6,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2%;
     padding-bottom: 5%;
-    // @include sidePadding;
     padding-left: 15%;
     padding-right: 15%;
     article {
@@ -49,6 +48,44 @@
         }
         .div:hover .SlidebottomEffect {
             height: 16vh;
+        }
+    }
+}
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (max-width: $tablet) {
+  body{ 
+    .staffWrapper {
+        padding-left: 4%;
+        padding-right: 5%;
+        article {
+            figure {
+                img {
+                    height: 250px;
+                }
+            }
+        }
+    } 
+  }
+}
+@media screen and (max-width: $mobile){
+    body{
+    .staffWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3%;
+        padding-left: 10%;
+        padding-right: 10%;
+        article {
+            figure {
+                img {
+                    height: 210px;
+                }
+            }
+        }
         }
     }
 }

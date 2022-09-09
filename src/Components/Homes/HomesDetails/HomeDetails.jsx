@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import './HomeDetails.scss'
-import { ImageModal, LayoutModal, LikeModal, MapModal } from "./Modal";
+import { ImageModal, LayoutModal, MapModal } from "./Modal";
 
 export const HomeDetails = () => {
     const { home_id } = useParams(0);

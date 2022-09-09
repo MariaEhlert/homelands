@@ -5,29 +5,24 @@ header {
     padding-top: 2%;
     @include logoFont;
     margin-bottom: 5%;
-
+    z-index: 4;
     .topNav {
         @media (width < 1199px) {
             display: none;
         }
     }
-
-
-    .svgWrapper {
-        svg {
+    .headerImageWrapper {
+        img {
             position: absolute;
             top: 0;
             z-index: -1;
         }
     }
-
     .headerWrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         @include sidePadding;
-        // background-color: red;
         margin-top: -3%;
-
         .navWrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -35,7 +30,6 @@ header {
                 li {
                     display: inline-block;
                     padding-left: 5%;
-
                     a {
                         color: white;
                         font-size: 2vw;

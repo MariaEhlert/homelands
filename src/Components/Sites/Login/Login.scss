@@ -1,0 +1,122 @@
+@import '../../../App.scss';
+
+.loginSiteWrapper {
+    @include sidePadding;
+
+    .loginWrapper {
+        h1 {
+            margin-left: -7%;
+            font-size: 2vw;
+        }
+
+        p {
+            padding-bottom: 2%;
+        }
+
+        form {
+            width: 40%;
+
+            div {
+                padding-bottom: 5%;
+
+                input[type=text],
+                input[type=password] {
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+            }
+            .loginbtn {
+                margin-left: -2%;
+                button {
+                    background-color: #000000;
+                    color: white;
+                    cursor: pointer;
+                    border: none;
+                    font-size: 1vw;
+                    padding: 15px 15px;
+                    border-radius: 7px;
+                    margin-left: 2%;
+                }
+            }
+        }
+    }
+
+    .loggedinWrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10%;
+        .logoutWrapper {
+            margin-top: 0;
+            p{
+                padding-bottom: 2%;
+            }
+            button {
+                background-color: #000000;
+                color: white;
+                cursor: pointer;
+                border: none;
+                font-size: 1vw;
+                padding: 15px 15px;
+                border-radius: 7px;
+            }
+        }
+    }
+}
+
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (max-width: $tablet) {
+  body{
+    .loginSiteWrapper {
+        .loggedinWrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            .logoutWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+    }  
+  }
+}
+@media screen and (max-width: $mobile){
+    body{ 
+    .loginSiteWrapper {
+        .loginWrapper {
+            h1 {
+                font-size: 4vw;
+            }
+            form {
+                width: 60%;
+    
+                div {    
+                    input[type=text],
+                    input[type=password] {
+                        width: 100%;
+                        padding: 0.5rem;
+                    }
+                }
+                .loginbtn {
+                    button {
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+        .loggedinWrapper {
+            .logoutWrapper {
+                button {
+                    font-size: 1.5vw;
+                }
+            }
+        }
+    }
+    }
+}

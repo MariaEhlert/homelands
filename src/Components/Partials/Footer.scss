@@ -29,3 +29,40 @@ footer{
         }
     }
 }
+
+
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (max-width: $tablet) {
+  body{
+    footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        .contactWrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            h3{
+                font-size: 3vw;
+            }
+        }
+    }   
+  }
+}
+@media screen and (max-width: $mobile){
+    body{
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .contactWrapper{
+            display: grid;
+            grid-template-columns: 1fr;
+            h3{
+                font-size: 4.5vw;
+            }
+        }
+    }  
+    }
+}

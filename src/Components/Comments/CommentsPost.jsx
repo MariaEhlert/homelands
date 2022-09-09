@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form';
 import axios from "axios";
 import './CommentsPost.scss';
 import { authHeader } from '../Helpers/Auth/Auth';
-import { Link } from 'react-router-dom';
 
 
 
@@ -26,7 +25,6 @@ export const CommentPost = () => {
     }
     return (
         <section>
-            {!onSubmit ? (
         <article className='formWrapper'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                 <h5>Skriv en anmeldelse</h5>
@@ -69,13 +67,6 @@ export const CommentPost = () => {
                 </div>
             </form>
         </article>
-            ) : 
-            (
-                <article className='commentsPosted'>
-                    <p>Tak for din anmeldelse af HomeLands!</p>
-                    <Link to={'/login'}>Se din anmeldelse</Link>
-                </article>
-            )}
         </section>
 
     )

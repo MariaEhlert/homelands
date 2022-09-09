@@ -3,7 +3,7 @@ import { Index } from "../Sites/Index/Index"
 import { Login } from "../Sites/Login/Login"
 import { NoPage } from '../Sites/NoPage/NoPage'
 import { HomeDetails } from "../Homes/HomesDetails/HomeDetails"
-import { HomesList } from "../Homes/HomesList/HomesList"
+import { HomesList } from "../Sites/HomesForSale/HomesList"
 import { EditComment } from "../Comments/EditComment"
 
 export const AppRouter = () => {

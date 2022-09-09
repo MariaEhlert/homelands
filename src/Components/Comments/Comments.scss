@@ -17,4 +17,31 @@
     display: flex;
     justify-content: center;
     padding-bottom: 5%;
+    a{
+        padding-top: 2%;
+        font-style: italic;
+        color: #000000;
+        text-decoration: underline;
+    }
+}
+
+
+//BREAKPOINTS
+$tablet: 980px;
+
+@media screen and (max-width: $tablet) {
+  body{
+    .commentsWrapper{
+        padding: 1%;
+        article{
+            @include sidePadding;
+            h5{
+                padding-bottom: 1%;
+            }
+            p{
+                padding-bottom: 1%;
+            }
+        }
+    }   
+  }
 }

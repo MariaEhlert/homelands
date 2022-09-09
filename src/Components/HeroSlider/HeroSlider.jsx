@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios";
 import Carousel from "react-material-ui-carousel";
-import './HeroSlider.scss'
 
 
 export const HeroSlider = () => {

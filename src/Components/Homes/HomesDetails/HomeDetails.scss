@@ -71,7 +71,6 @@
             div {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                p {}
             }
         }
     }
@@ -89,10 +88,40 @@
                 img{
                     width: 60%;
                 }
-                figcaption{
-
-                }
             }
         }
     }
+}
+
+
+//BREAKPOINTS
+$tablet: 980px;
+
+
+@media screen and (max-width: $tablet) {
+  body{
+    .homeImageWrapper{
+        img{
+            height: 60vh;
+        }
+    } 
+    .homeDetailsWrapper {
+        margin-top: -12%;
+        .homeInfoWrapper {
+            figure {
+                figcaption{
+                    font-size: 1.5vw;
+                }
+                .homeIconWrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    button{
+                        height: 70px;
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }   
+  }
 }

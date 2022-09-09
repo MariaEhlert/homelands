@@ -1,0 +1,103 @@
+.editFormWrapper {
+    display: flex;
+    justify-content: center;
+
+    form {
+        width: 40%;
+
+        .formElement {
+            padding-bottom: 5%;
+
+            input[type=text],
+            textarea {
+                width: 100%;
+                padding: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type=number] {
+                width: 102%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            span {
+                text-align: center;
+                color: red;
+            }
+        }
+
+        .btnWrapper {
+            text-align: center;
+
+            button {
+                background-color: #000000;
+                color: white;
+                cursor: pointer;
+                border: none;
+                font-size: 1vw;
+                padding: 15px 15px;
+                border-radius: 7px;
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+.goBack {
+    font-style: italic;
+    text-align: center;
+    padding-top: 3%;
+
+    a {
+        color: #000000;
+        border: 0.5px solid #707070;
+        padding: 1%;
+    }
+}
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (max-width: $tablet) {
+    body {
+        .editFormWrapper {
+            form {
+                .formElement {
+                    input[type=number] {
+                        width: 104%;
+                    }
+                }
+
+                .btnWrapper {
+                    button {
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body {
+        .editFormWrapper {
+            form {
+                .formElement {
+                    input[type=number] {
+                        width: 105%;
+                    }
+                }
+
+                .btnWrapper {
+                    button {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}

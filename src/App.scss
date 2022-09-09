@@ -9,6 +9,7 @@ main{
     //laver linjeskift efter linjeskift i backend
     white-space: pre-wrap;
     font-family: 'Trebuchet MS', sans-serif;
+    min-height: 69.2vh;
 
 }
 @mixin sidePadding{
@@ -23,17 +24,18 @@ main{
         @include sidePadding;
         padding-bottom: 2%;
     }
-    h2{
-
-    }
-    h3{
-
-    }
-    h4{
-        font-size: 2vw;
-    }
-    h5{
-        font-size: 1.7vw;
-    }
     
+}
+
+
+//BREAKPOINTS
+$tablet: 980px;
+
+
+@media screen and (max-width: $tablet) {
+  body{
+    main{
+        min-height: 76vh;    
+    }
+  }
 }

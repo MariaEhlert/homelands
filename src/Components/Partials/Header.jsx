@@ -4,6 +4,7 @@ import { Nav } from "./Nav"
 import './Header.scss'
 import { Link } from "react-router-dom"
 import { BurgerMenu } from "./BurgerMenu"
+import HeaderImage from '../../Assets/Images/Header.svg'
 
 const navItems = [
 	{ name: 'Forside', path: '/' },
@@ -16,10 +17,8 @@ export const Header = () => {
 	return (
 		<header>
 
-			<div className="svgWrapper">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="108" viewBox="0 0 1737.138 123.576">
-					<path id="HEADER_BG" data-name="HEADER BG" d="M0,123.576,491,70.562l1246.138,53.014V0H0Z" />
-				</svg>
+			<div className="headerImageWrapper">
+				<img src={HeaderImage} alt="header" />
 			</div>
 			<nav className='topNav'>
 				<div className="headerWrapper">

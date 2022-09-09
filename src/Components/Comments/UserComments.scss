@@ -1,0 +1,71 @@
+.userCommentsWrapper{
+    padding-bottom: 5%;
+    thead{
+        tr{
+            th{
+                border-bottom: 1px solid #707070;
+                padding-bottom: 2%;
+                text-align: left;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border-bottom: 1px solid #707070;
+                padding-bottom: 1%;
+                padding-top: 1%;
+                a{
+                    color: green;
+                    padding-right: 5%;
+                }
+                button{
+                    border: none;
+                    background-color: white;
+                    color: red;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+
+//BREAKPOINTS
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (max-width: $tablet) {
+  body{
+    .userCommentsWrapper{
+      tbody{
+          tr{
+              td{
+                  a{
+                      color: green;
+                      padding-right: 5%;
+                  }
+                  button{
+                      font-size: 1.5vw;
+                  }
+              }
+          }
+      }
+  }
+  }
+}
+@media screen and (max-width: $mobile){
+    body{ 
+    .userCommentsWrapper{
+      padding-bottom: 1%;
+      tbody{
+          tr{
+              td{
+                  button{
+                      font-size: 2.3vw;
+                  }
+              }
+          }
+      }
+  }
+    }
+}
