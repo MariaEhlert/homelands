@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Carousel from 'react-material-ui-carousel';
-// import { Slide } from 'react-slideshow-image';
-// import ImageGallery from 'react-image-gallery';
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -11,7 +9,6 @@ const customStyles = {
         right: 'auto',
         bottom: 'auto',
         width: '60%',
-        // marginRight: '100%',
         transform: 'translate(-50%, -50%)',
     },
 };
@@ -30,6 +27,8 @@ export const ImageModal = props => {
             <button onClick={openModal}>
                 <img src={require('../../../Assets/Images/CameraIcon.png')} alt="cameraIcon" />
             </button>
+            {/* laver modal med en carousel i  */}
+            {/* til at kunne vise alle boliges billeder */}
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -54,6 +53,7 @@ export const ImageModal = props => {
         </div>
     );
 }
+// modal med plantegning 
 export const LayoutModal = props => {
     const [modalIsOpen, setIsOpen] = useState(false);
     function openModal() {
@@ -81,7 +81,9 @@ export const LayoutModal = props => {
         </div>
     );
 }
-export const MapModal = props => {
+// modal med map 
+// VIRKER IKKE 
+export const MapModal = () => {
     const [modalIsOpen, setIsOpen] = useState(false);
     function openModal() {
         setIsOpen(true);

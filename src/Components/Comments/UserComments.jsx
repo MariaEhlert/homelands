@@ -24,6 +24,7 @@ export const UserComments = () => {
 
     const deleteComment = async (id) => {
         try {
+            // bruger authHeader til at tjekke om sessionStorage eksisterer
             const result = await axios.delete(`https://api.mediehuset.net/homelands/reviews/${id}`, { headers: authHeader() });
             if (result) {
                 window.location.reload()
@@ -34,6 +35,7 @@ export const UserComments = () => {
     }
     return (
         <>
+        {/* bruger conditional ternary operator da bruger kommantar kun skal vises ved login*/}
             {!loginData ?
                 (
                     <></>

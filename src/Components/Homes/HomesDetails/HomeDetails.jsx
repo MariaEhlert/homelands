@@ -22,6 +22,7 @@ export const HomeDetails = () => {
         }
         getHomeDetails();
     }, [home_id])
+    // laver date stamp for at kunne skrive hvor mange dage boligeden har været til salg
     const DaysAgo = () => {
         const date1 = homeDetails.date_stamp * 1000;
         const date2 = new Date();

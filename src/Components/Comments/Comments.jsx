@@ -41,6 +41,7 @@ export const Comments = () => {
             
         </section>
         <section className='submitComment'>
+        {/* burger conditional ternary operator til at tjekke om bruger er logget ind for at kunne lave en anmedelse */}
         {!loginData ? (
             <Link to={'/login'}>
                 <p>Log ind for at skrive en anmeldelse</p>

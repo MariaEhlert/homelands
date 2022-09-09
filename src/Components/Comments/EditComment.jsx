@@ -14,6 +14,7 @@ export const EditComment = () => {
         formData.append('content', data.content);
         formData.append('num_stars', data.num_stars);
         formData.append('active', 1);
+        // bruger authHeader til at tjekke om sessionStorage eksisterer
         const result = await axios.put('https://api.mediehuset.net/homelands/reviews', formData, { headers: authHeader() });
         if (result) {
             console.log('ok');

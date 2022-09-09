@@ -32,7 +32,7 @@ const useAuth = () => useContext(AuthContext);
 //eksempel: const {loginData} = useAuth()
 
 const authHeader = () => {
-    //henter localstorage hvis den eksisterer
+    //henter sessionStorage hvis den eksisterer
     //conditional ternary operator
     const currentToken = sessionStorage.getItem("token") ? JSON.parse(sessionStorage.getItem("token")) : "";
     // returner token hvis den eksister

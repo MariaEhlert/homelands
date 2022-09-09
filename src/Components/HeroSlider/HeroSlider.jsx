@@ -19,6 +19,7 @@ export const HeroSlider = () => {
         }
         getHeroImage();
     }, [])
+    // henter kun de 3 første bolig bileder
     const first3 = heroSlider.slice(0, 3);
     return (
         <article className='heroWrapper'>

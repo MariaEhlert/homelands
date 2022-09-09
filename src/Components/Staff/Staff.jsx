@@ -7,6 +7,7 @@ export const Staff = () => {
     useEffect(() => {
         const getStaff = async () => {
             try {
+                //henter api med ansatte
                 const result = await axios.get('https://api.mediehuset.net/homelands/staff');
                 if (result.data) {
                     setStaffList(result.data.items);
@@ -19,6 +20,7 @@ export const Staff = () => {
     }, [])
     return (
         <section className='staffWrapper'>
+            {/* mapper over alle ansatte for at kunne tække dem ud */}
             {staffList && staffList.map((item) => {
                 return (
                     <article key={item.id}>
@@ -28,6 +30,7 @@ export const Staff = () => {
                                 <h5>{item.firstname} {item.lastname}</h5>
                                 <p>{item.position}</p>
                             </figcaption>
+                            {/* hover overlay */}
                             <div className='overlay SlidebottomEffect'>
                                 <h5>{item.firstname} {item.lastname}</h5>
                                 <p>{item.position}</p>

@@ -10,7 +10,6 @@ export const SelectedHomes = () => {
                 const result = await axios.get('https://api.mediehuset.net/homelands/homes');
                 if (result.data) {
                     setSelectedHomes(result.data.items);
-                    // console.log(result.data.items);
                 }
             } catch (error) {
                 console.log(error);
@@ -18,6 +17,7 @@ export const SelectedHomes = () => {
         }
         getSelectedHomes();
     }, [])
+    // henter kun bolig id 6 til 9
     const selectThree = selectedHomes.slice(7, 10);
     return (
         <article className="selectWrapper" >

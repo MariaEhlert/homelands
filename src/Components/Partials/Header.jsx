@@ -16,7 +16,6 @@ export const Header = () => {
 
 	return (
 		<header>
-
 			<div className="headerImageWrapper">
 				<img src={HeaderImage} alt="header" />
 			</div>
@@ -25,6 +24,7 @@ export const Header = () => {
 					<Link to='/'><Logo /></Link>
 					<div className='navWrapper'>
 						<Nav navItems={navItems} />
+						{/* VIRKER IKKE  */}
 						<Search />
 					</div>
 				</div>

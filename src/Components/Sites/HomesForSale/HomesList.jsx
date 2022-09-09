@@ -30,8 +30,8 @@ export const HomesList = () => {
                 {homesList && homesList.map((homes) => {
                     // Returnerer komponent med homes object som data objekt
                     return (
-                        // kalder HomesListItem som tjekker alt det 
-                        //api data ud som skal bruges til at de bolig listen
+                        // kalder HomesListItem da det 
+                        //data som skal bruges til bolig listen
                         <HomesListItem key={homes.id} data={homes} home_id={home_id} />
                         //sender data med som props 
                     )

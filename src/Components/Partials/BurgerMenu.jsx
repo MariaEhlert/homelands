@@ -9,11 +9,13 @@ export const BurgerMenu = props => {
     }
     return (
         <>
+        {/* bruger conditional ternary operator til sætte to forskællige klasser på destopnav */}
             <div className={isActive ? 'burgerMenuActive' : 'burgerMenu'} onClick={handleToggle}>
                 <div className="burgerMenuLine"></div>
                 <div className="burgerMenuLine"></div>
                 <div className="burgerMenuLine"></div>
             </div>
+        {/* bruger conditional ternary operator til sætte to forskællige klasser på burgermenu*/}
             <ul className={isActive ? 'activeMenu' : 'menu'}> 
                 {props && props.navItems && props.navItems.map((value, index) => {
                     return (
